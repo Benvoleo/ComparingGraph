@@ -1,5 +1,5 @@
 ﻿
-namespace EulerianGraph
+namespace ComparingGraph
 {
     partial class MainForm
     {
@@ -29,7 +29,6 @@ namespace EulerianGraph
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Check_button = new System.Windows.Forms.Button();
             this.SettingBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -148,7 +147,7 @@ namespace EulerianGraph
             this.SaveData_button.Name = "SaveData_button";
             this.SaveData_button.Size = new System.Drawing.Size(124, 44);
             this.SaveData_button.TabIndex = 16;
-            this.SaveData_button.Text = "Save all info";
+            this.SaveData_button.Text = "Save image";
             this.SaveData_button.UseVisualStyleBackColor = false;
             this.SaveData_button.Click += new System.EventHandler(this.SaveData_button_Click);
             // 
@@ -201,6 +200,7 @@ namespace EulerianGraph
             this.pictureBox1.Size = new System.Drawing.Size(560, 433);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -303,7 +303,6 @@ namespace EulerianGraph
             this.Controls.Add(this.SaveData_button);
             this.Controls.Add(this.SettingBox);
             this.Controls.Add(this.Check_button);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Visualize all graphs";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -318,8 +317,6 @@ namespace EulerianGraph
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Check_button;
         private System.Windows.Forms.GroupBox SettingBox;
         private System.Windows.Forms.Button SaveData_button;
         private System.Windows.Forms.Button InfoG2_button;
@@ -329,7 +326,6 @@ namespace EulerianGraph
         private System.Windows.Forms.CheckBox graph1checkBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.RadioButton FromKeyboard_radioButton;
         public System.Windows.Forms.RadioButton FromFile_radioButton;
@@ -338,6 +334,8 @@ namespace EulerianGraph
         private System.Windows.Forms.Button CleanG1_button;
         public System.Windows.Forms.Button InputG1_button;
         private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.Button Check_button;
+        public System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EulerianGraph.Properties {
+namespace ComparingGraph.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

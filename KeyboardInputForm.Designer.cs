@@ -1,5 +1,5 @@
 ﻿
-namespace EulerianGraph
+namespace ComparingGraph
 {
     partial class KeyboardInputForm
     {
@@ -29,7 +29,6 @@ namespace EulerianGraph
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyboardInputForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Check_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@ namespace EulerianGraph
             this.groupBox1.Size = new System.Drawing.Size(652, 92);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Check_button
             // 
@@ -73,7 +73,7 @@ namespace EulerianGraph
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 15);
             this.label2.TabIndex = 9;
-            this.label2.Text = "MFO = 1 0 2 3 4 0 5 0 6 7";
+            this.label2.Text = "MFO = 0 1 0 1 0 1 0 2 3 4";
             // 
             // label1
             // 
@@ -110,9 +110,9 @@ namespace EulerianGraph
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(676, 110);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KeyboardInputForm";
             this.Text = "Input from keyboard";
+            this.Load += new System.EventHandler(this.KeyboardInputForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

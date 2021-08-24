@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace EulerianGraph
+namespace ComparingGraph
 {
     public partial class KeyboardInputForm : Form
     {
@@ -38,7 +38,7 @@ namespace EulerianGraph
             MassivTextBox.BackColor = Color.White;
 
             string AllText = MassivTextBox.Text;
-
+      
             List<string> tmp = new List<string>();
             string[] ArrayWithData = new string[120];
 
@@ -47,19 +47,33 @@ namespace EulerianGraph
             try
             {
                 ArrayWithData = AllText.Split(' ');
+
                 Array = new int[ArrayWithData.Length];
                 for (int i = 0; i < ArrayWithData.Length; i++)
                 {
                     OutputArray.Add(Convert.ToInt32(ArrayWithData[i]));
                 }
+               
                 MassivTextBox.BackColor = Color.Green;
 
                 current.MFO = OutputArray;
+                
             }
+
             catch (Exception)
             {
                 MassivTextBox.BackColor = Color.Red;
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KeyboardInputForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

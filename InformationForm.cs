@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace EulerianGraph
+namespace ComparingGraph
 {
     /// <summary>
     /// Класс с формой хранящей информацию
@@ -38,6 +38,11 @@ namespace EulerianGraph
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

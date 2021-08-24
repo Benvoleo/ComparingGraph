@@ -1,5 +1,5 @@
 ﻿
-namespace EulerianGraph
+namespace ComparingGraph
 {
     partial class InformationForm
     {
@@ -29,8 +29,9 @@ namespace EulerianGraph
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LongRoute = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.WayTextBox = new System.Windows.Forms.TextBox();
             this.EureTextBox = new System.Windows.Forms.TextBox();
             this.NumLTextBox = new System.Windows.Forms.TextBox();
@@ -41,8 +42,6 @@ namespace EulerianGraph
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.LongRoute = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +66,27 @@ namespace EulerianGraph
             this.groupBox1.Size = new System.Drawing.Size(361, 310);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // LongRoute
+            // 
+            this.LongRoute.Location = new System.Drawing.Point(11, 268);
+            this.LongRoute.Multiline = true;
+            this.LongRoute.Name = "LongRoute";
+            this.LongRoute.ReadOnly = true;
+            this.LongRoute.Size = new System.Drawing.Size(336, 27);
+            this.LongRoute.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(8, 250);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Longest route";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // WayTextBox
             // 
@@ -165,26 +185,6 @@ namespace EulerianGraph
             this.label1.TabIndex = 0;
             this.label1.Text = "Number of peaks ";
             // 
-            // LongRoute
-            // 
-            this.LongRoute.Location = new System.Drawing.Point(11, 268);
-            this.LongRoute.Multiline = true;
-            this.LongRoute.Name = "LongRoute";
-            this.LongRoute.ReadOnly = true;
-            this.LongRoute.Size = new System.Drawing.Size(336, 27);
-            this.LongRoute.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(8, 250);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Longest route";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // InformationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +192,6 @@ namespace EulerianGraph
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(383, 330);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InformationForm";
             this.Text = "Information";
             this.Load += new System.EventHandler(this.InformationForm_Load);

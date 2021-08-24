@@ -2,12 +2,12 @@
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
-namespace EulerianGraph
+namespace ComparingGraph
 {
     public partial class MainForm : Form
     {
-        public EulerianGraph.Comparing.Graph graph1;
-        public EulerianGraph.Comparing.Graph graph2;
+        public ComparingGraph.Comparing.Graph graph1;
+        public ComparingGraph.Comparing.Graph graph2;
 
         /// <summary>
         /// main construct
@@ -33,7 +33,7 @@ namespace EulerianGraph
         /// <param name="graph"></param>
         /// <param name="picture"></param>
         /// <param name="name"></param>
-        private void Input(EulerianGraph.Comparing.Graph graph, PictureBox picture, string name)
+        private void Input(ComparingGraph.Comparing.Graph graph, PictureBox picture, string name)
         {
             picture.Hide();
             graph.ClearAllData();
@@ -56,6 +56,7 @@ namespace EulerianGraph
             else
             {
                 KeyboardInputForm form = new KeyboardInputForm(graph);
+
                 form.groupBox1.Text += name;
                 form.ShowDialog();
                 try
@@ -65,6 +66,27 @@ namespace EulerianGraph
                     picture.Show();
                     graph.G.clearSheet();
                     graph.Visualize();
+                    if (graph.NumberOfDots > 20)
+                    {
+                        graph.G.clearSheet();
+                        graph.ClearAllData();
+                        MessageBox.Show("Dots > 20", "Error");
+                        
+                        throw new Exception();
+
+                    }
+                    if (graph.NumberOfFacets > 50)
+                    {
+                        graph.G.clearSheet();
+                        graph.ClearAllData();
+                        MessageBox.Show("Facets > 50", "Error");
+                        
+
+                        throw new Exception("Facets > 50");
+
+                    }
+
+
                     if (graph.IsEulerian)
                     {
                         graph.G.clearSheet();
@@ -73,6 +95,7 @@ namespace EulerianGraph
                 }
                 catch (Exception)
                 {
+                   
                     MessageBox.Show("Wrong input", "Error");
                 }
             }
@@ -83,13 +106,13 @@ namespace EulerianGraph
         /// </summary>
         /// <param name="graph"></param>
         /// <param name="name"></param>
-        private void Info(EulerianGraph.Comparing.Graph graph, string name)
+        private void Info(ComparingGraph.Comparing.Graph graph, string name)
         {
             InformationForm form = new InformationForm();
             form.Show();
             form.Text += name;
             if (graph.Name == null)
-                form.NameTextBox.Text = "Данные введены вручную или не введены";
+                form.NameTextBox.Text = "Keyboard input";
             else
                 form.NameTextBox.Text = graph.Name;
 
@@ -148,7 +171,7 @@ namespace EulerianGraph
         /// <param name="e"></param>
         private void InputG2_button_Click(object sender, EventArgs e)
         {
-            Input(graph2, pictureBox2, " для графа 2");
+            Input(graph2, pictureBox2, " graph 2");
         }
 
         /// <summary>
@@ -179,9 +202,9 @@ namespace EulerianGraph
         private void Check_button_Click(object sender, EventArgs e)
         {
             if (graph1.IsEulerian && graph2.IsEulerian)
-                MessageBox.Show("Оба графы эйлеровы, следовательно равны!\n","Результаты сравнения");
+                MessageBox.Show("Euler graphs are equal!\n", "Result");
             else
-                MessageBox.Show("Графы не равны", "Результаты сравнения");  
+                MessageBox.Show("The graphs are not equal", "Result");  
         }
 
         /// <summary>
@@ -237,6 +260,11 @@ namespace EulerianGraph
             tip.SetToolTip(InfoG2_button, "Получить подробную информацию о графе 1: кол-во вершин и ребер, название файла и информацию о эйлеровости графа");
             tip.SetToolTip(Check_button, "Сравнить два графа на эйлеровость");
             tip.SetToolTip(SaveData_button, "Сохранить изображения выбранных графов");  
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }   
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparingGraph", "ComparingGraph.csproj", "{B6409B10-61F0-4955-8236-3C018CA96011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerianGraphUnitTest", "..\EulerianGraphUnitTest\EulerianGraphUnitTest.csproj", "{7DB835E8-4962-475C-B708-DBFD4549F074}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompGraph.Test", "..\CompGraph.Test\CompGraph.Test.csproj", "{967E57B5-F6B7-45D0-9700-58E3DC9ECF5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B6409B10-61F0-4955-8236-3C018CA96011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6409B10-61F0-4955-8236-3C018CA96011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6409B10-61F0-4955-8236-3C018CA96011}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DB835E8-4962-475C-B708-DBFD4549F074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DB835E8-4962-475C-B708-DBFD4549F074}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DB835E8-4962-475C-B708-DBFD4549F074}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DB835E8-4962-475C-B708-DBFD4549F074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967E57B5-F6B7-45D0-9700-58E3DC9ECF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967E57B5-F6B7-45D0-9700-58E3DC9ECF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967E57B5-F6B7-45D0-9700-58E3DC9ECF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967E57B5-F6B7-45D0-9700-58E3DC9ECF5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

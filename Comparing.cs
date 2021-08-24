@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
-namespace EulerianGraph
+namespace ComparingGraph
 {
     public class Comparing
     {
@@ -285,7 +285,7 @@ namespace EulerianGraph
 
                     if (c == 0)
                     {
-                        MessageBox.Show("MFO-представление графа не имеет разделителя (0) или таковой является некорректным", "Ошибка содержимого FO");
+                        MessageBox.Show("MFO-Error. A has no or (0) separator delimiter", "Error FO");
                         ClearAllData();
                         return false;
                     }
@@ -317,7 +317,7 @@ namespace EulerianGraph
                 }
                 catch
                 {
-                    MessageBox.Show("Содержимое файла не есть FO представлением графа", "Возникла ошибка!");
+                    MessageBox.Show("Check your file", "Input Error");
                     ClearAllData();
                     return false;
                 } 
